@@ -1,1 +1,34 @@
 # Jenkins-task
+
+pipeline {
+    agent any  // Runs on any available Jenkins agent
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/your-username/your-repo.git'  // Replace with your repo
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Example: Compile Java or build a Docker image
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Example: Run unit tests or security tests
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying application...'
+                // Example: Deploy to a server or cloud
+            }
+        }
+    }
+}
