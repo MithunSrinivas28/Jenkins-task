@@ -1,5 +1,11 @@
+Jenkins code
+
+
+
+
 pipeline {
-    agent any  // Runs on any available Jenkins agent
+
+agent any  // Runs on any available Jenkins agent
 
     stages {
         stage('Checkout') {
